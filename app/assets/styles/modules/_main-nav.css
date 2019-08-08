@@ -1,0 +1,45 @@
+.main-nav {
+    &__links {
+        display: none;
+    }
+
+    &__hamburger {
+        position: relative;
+        top: 0;
+        left: 100%;
+        transform: translateX(-138%);
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+        padding: 0rem;
+        
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 6px;
+            background: white;
+            transform-origin: center;
+            transform: rotate(180deg);
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: -20px;
+                width: 120%;
+                height: 6px;
+                background: inherit;
+            }
+
+            &::after {
+                top: 20px;
+            }
+        }
+        
+        .short {
+            width: 80%
+        }
+    }
+}
